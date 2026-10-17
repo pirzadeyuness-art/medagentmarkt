@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedAgentmarkt — Marketplace for Healthcare AI Agents, Schemas & Workflows</title>
+<meta name="description" content="MedAgentmarkt.com connects healthcare buyers with AI creators. Recover the $150B no-show cost, deploy clinic agents in minutes, and sell your JSON schemas, prompts, and APIs.">
+<meta name="theme-color" content="#0f172a">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MedAgentmarkt">
+<meta property="og:title" content="MedAgentmarkt — The Marketplace for Healthcare AI Agents">
+<meta property="og:description" content="Buyers: cut no-shows and recover lost revenue. Creators: sell JSON schemas, prompts, and APIs. Join the waitlist.">
+<meta property="og:url" content="https://medagentmarkt.com/">
+<meta property="og:image" content="https://medagentmarkt.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MedAgentmarkt — The Marketplace for Healthcare AI Agents">
+<meta name="twitter:description" content="Recover the $150B no-show cost. Deploy clinic AI in minutes. Sell your healthcare AI assets.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🩺</text></svg>">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','sans-serif'] } } } }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  .glow{background:radial-gradient(60% 60% at 50% 0%,rgba(16,185,129,.15),transparent 70%)}
+</style>
+</head>
+<body class="bg-slate-900 text-slate-200 font-sans antialiased">
+
+<!-- Nav -->
+<header class="sticky top-0 z-50 backdrop-blur bg-slate-900/80 border-b border-slate-800">
+  <nav class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2 font-bold text-white text-lg">
+      <span class="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-500/40 grid place-items-center text-emerald-400">+</span>
+      MedAgent<span class="text-emerald-400">markt</span>
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm">
+      <a href="#buyers" class="hover:text-emerald-400 transition">For Buyers</a>
+      <a href="#creators" class="hover:text-emerald-400 transition">For Creators</a>
+      <a href="#products" class="hover:text-emerald-400 transition">Day-One Products</a>
+    </div>
+    <a href="#waitlist" class="bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-semibold px-4 py-2 rounded-lg text-sm transition">Join Waitlist</a>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="glow relative">
+  <div class="max-w-6xl mx-auto px-4 pt-20 pb-16 text-center">
+    <span class="inline-block text-xs font-semibold tracking-widest uppercase text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 rounded-full px-4 py-1.5 mb-6">Launching Soon · Healthcare AI Marketplace</span>
+    <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">Healthcare AI you can <span class="text-emerald-400">buy & sell</span> — in minutes, not months.</h1>
+    <p class="mt-6 max-w-2xl mx-auto text-lg text-slate-400">MedAgentmarkt connects clinics with world-class AI creators. Deploy agents, schemas, and workflows on day one. Zero technical hassle.</p>
+    <form id="waitlist-top" class="mt-10 flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="return handleWaitlist(event)">
+      <input type="email" required placeholder="you@clinic.com" class="flex-1 bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+      <button type="submit" class="bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-bold px-6 py-3 rounded-lg transition">Get Early Access</button>
+    </form>
+    <p id="msg-top" class="mt-3 text-sm text-emerald-400 hidden">✓ You're on the list. We'll be in touch!</p>
+  </div>
+</section>
+
+<!-- Two-sided value -->
+<section class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-6" id="buyers">
+  <!-- Buyers -->
+  <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 hover:border-emerald-500/40 transition">
+    <div class="text-3xl mb-4">🏥</div>
+    <h2 class="text-2xl font-bold text-white">For Healthcare Buyers & Clinic Owners</h2>
+    <p class="mt-3 text-slate-400">No-shows cost the healthcare industry <span class="text-white font-semibold">$150 billion every year</span> — clinics lose ~$150 per missed appointment. Stop bleeding revenue.</p>
+    <ul class="mt-6 space-y-3 text-sm">
+      <li class="flex gap-3"><span class="text-emerald-400">✓</span><span><b class="text-white">Recover no-show revenue</b> — agents that confirm, remind, and refill your calendar automatically.</span></li>
+      <li class="flex gap-3"><span class="text-emerald-400">✓</span><span><b class="text-white">Smart scheduling</b> — predictive overbooking and waitlist backfill built in.</span></li>
+      <li class="flex gap-3"><span class="text-emerald-400">✓</span><span><b class="text-white">Zero technical hassle</b> — no code, no servers. Pick an agent, connect, go live same day.</span></li>
+      <li class="flex gap-3"><span class="text-emerald-400">✓</span><span><b class="text-white">HIPAA-first</b> — every listing ships with compliance documentation.</span></li>
+    </ul>
+    <a href="#waitlist" class="inline-block mt-8 text-emerald-400 font-semibold hover:text-emerald-300">Reserve your spot →</a>
+  </div>
+  <!-- Creators -->
+  <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 hover:border-emerald-500/40 transition" id="creators">
+    <div class="text-3xl mb-4">🧠</div>
+    <h2 class="text-2xl font-bold text-white">For AI Creators & Agencies</h2>
+    <p class="mt-3 text-slate-400">Turn your healthcare AI expertise into recurring revenue. Sell to thousands of clinics without hunting for clients.</p>
+    <ul class="mt-6 space-y-3 text-sm">
+      <li class="flex gap-3"><span class="text-emerald-400">✓</span><span><b class="text-white">Sell JSON schemas</b> — structured data formats clinics actually need.</span></li>
+      <li class="flex gap-3"><span class="text-emerald-400">✓</span><span><b class="text-white">Sell prompts & workflows</b> — battle-tested, ready to deploy.</span></li>
+      <li class="flex gap-3"><span class="text-emerald-400">✓</span><span><b class="text-white">Sell APIs with token-based usage</b> — metered billing, paid per token.</span></li>
+      <li class="flex gap-3"><span class="text-emerald-400">✓</span><span><b class="text-white">Keep 80%</b> — transparent revenue share, monthly payouts.</span></li>
+    </ul>
+    <a href="#waitlist" class="inline-block mt-8 text-emerald-400 font-semibold hover:text-emerald-300">List your first product →</a>
+  </div>
+</section>
+
+<!-- Day-One Products -->
+<section id="products" class="max-w-6xl mx-auto px-4 py-16">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl md:text-4xl font-bold text-white">3 Day-One Preview Products</h2>
+    <p class="mt-3 text-slate-400">Available at launch — one click from listing to live.</p>
+  </div>
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-6 flex flex-col hover:border-emerald-500/40 transition">
+      <span class="self-start text-xs font-semibold text-emerald-300 bg-emerald-500/10 border border-emerald-500/30 rounded-full px-3 py-1">Agent</span>
+      <h3 class="mt-4 text-xl font-bold text-white">SmartClinic No-Show Shield</h3>
+      <p class="mt-2 text-sm text-slate-400 flex-1">Autonomous agent that confirms appointments, sends smart reminders, predicts no-show risk, and auto-fills cancellations from your waitlist.</p>
+      <div class="mt-4 flex items-center justify-between text-sm"><span class="text-slate-500">Setup: 10 min</span><span class="text-emerald-400 font-semibold">Preview</span></div>
+    </div>
+    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-6 flex flex-col hover:border-emerald-500/40 transition">
+      <span class="self-start text-xs font-semibold text-sky-300 bg-sky-500/10 border border-sky-500/30 rounded-full px-3 py-1">JSON Schema</span>
+      <h3 class="mt-4 text-xl font-bold text-white">HIPAA-Safe Triage Schema</h3>
+      <p class="mt-2 text-sm text-slate-400 flex-1">Production-ready JSON schema for patient intake and symptom triage — de-identified by design, validated against PHI-safe field rules.</p>
+      <div class="mt-4 flex items-center justify-between text-sm"><span class="text-slate-500">Setup: instant</span><span class="text-emerald-400 font-semibold">Preview</span></div>
+    </div>
+    <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-6 flex flex-col hover:border-emerald-500/40 transition">
+      <span class="self-start text-xs font-semibold text-violet-300 bg-violet-500/10 border border-violet-500/30 rounded-full px-3 py-1">Workflow / Prompt</span>
+      <h3 class="mt-4 text-xl font-bold text-white">Pharma Clinical Trial Matcher</h3>
+      <p class="mt-2 text-sm text-slate-400 flex-1">Prompt workflow that matches eligible patients to active clinical trials from structured EHR data — with explainable inclusion criteria scoring.</p>
+      <div class="mt-4 flex items-center justify-between text-sm"><span class="text-slate-500">Setup: 15 min</span><span class="text-emerald-400 font-semibold">Preview</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="border-y border-slate-800 bg-slate-800/30">
+  <div class="max-w-6xl mx-auto px-4 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <div><div class="text-3xl font-extrabold text-emerald-400">$150B</div><div class="text-sm text-slate-400 mt-1">Annual no-show cost</div></div>
+    <div><div class="text-3xl font-extrabold text-emerald-400">10 min</div><div class="text-sm text-slate-400 mt-1">From listing to live</div></div>
+    <div><div class="text-3xl font-extrabold text-emerald-400">80%</div><div class="text-sm text-slate-400 mt-1">Creator revenue share</div></div>
+    <div><div class="text-3xl font-extrabold text-emerald-400">100%</div><div class="text-sm text-slate-400 mt-1">HIPAA-first listings</div></div>
+  </div>
+</section>
+
+<!-- Waitlist -->
+<section id="waitlist" class="glow">
+  <div class="max-w-2xl mx-auto px-4 py-20 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-white">Be first in line</h2>
+    <p class="mt-3 text-slate-400">Get early access to the marketplace, launch-day discounts, and creator onboarding.</p>
+    <form class="mt-8 flex flex-col sm:flex-row gap-3" onsubmit="return handleWaitlist(event)">
+      <input type="email" required placeholder="Enter your email" class="flex-1 bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+      <button type="submit" class="bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-bold px-6 py-3 rounded-lg transition">Join the Waitlist</button>
+    </form>
+    <p class="msg mt-3 text-sm text-emerald-400 hidden">✓ You're on the list. We'll be in touch!</p>
+    <p class="mt-4 text-xs text-slate-500">No spam. Unsubscribe anytime.</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-slate-800">
+  <div class="max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+    <div class="flex items-center gap-2 font-bold text-white">MedAgent<span class="text-emerald-400">markt</span></div>
+    <div class="flex gap-6">
+      <a href="#buyers" class="hover:text-emerald-400">For Buyers</a>
+      <a href="#creators" class="hover:text-emerald-400">For Creators</a>
+      <a href="#products" class="hover:text-emerald-400">Products</a>
+    </div>
+    <p>© 2025 MedAgentmarkt.com</p>
+  </div>
+</footer>
+
+<script>
+function handleWaitlist(e){
+  e.preventDefault();
+  e.target.reset();
+  e.target.nextElementSibling.classList.remove('hidden');
+  document.querySelectorAll('.msg').forEach(m=>m.classList.remove('hidden'));
+  return false;
+}
+</script>
+</body>
+</html>
