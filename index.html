@@ -51,12 +51,8 @@ tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-ser
     <span class="inline-block text-xs font-semibold tracking-widest uppercase text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 rounded-full px-4 py-1.5 mb-6">Launching Soon · Healthcare AI Marketplace</span>
     <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">Healthcare AI you can <span class="text-emerald-400">buy & sell</span> — in minutes, not months.</h1>
     <p class="mt-6 max-w-2xl mx-auto text-lg text-slate-400">MedAgentmarkt connects clinics with world-class AI creators. Deploy agents, schemas, and workflows on day one. Zero technical hassle.</p>
-    <form id="waitlist-top" class="mt-10 flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="return handleWaitlist(event)">
-      <input type="email" required placeholder="you@clinic.com" class="flex-1 bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-      <button type="submit" class="bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-bold px-6 py-3 rounded-lg transition">Get Early Access</button>
-    </form>
-    <p id="msg-top" class="mt-3 text-sm text-emerald-400 hidden">✓ You're on the list. We'll be in touch!</p>
-  </div>
+    <a href="#waitlist" class="inline-block mt-8 bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-semibold px-6 py-3 rounded-lg transition">Join the Waitlist</a>
+</div>
 </section>
 
 <!-- Two-sided value -->
@@ -132,11 +128,8 @@ tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-ser
   <div class="max-w-2xl mx-auto px-4 py-20 text-center">
     <h2 class="text-3xl md:text-4xl font-bold text-white">Be first in line</h2>
     <p class="mt-3 text-slate-400">Get early access to the marketplace, launch-day discounts, and creator onboarding.</p>
-    <form class="mt-8 flex flex-col sm:flex-row gap-3" onsubmit="return handleWaitlist(event)">
-      <input type="email" required placeholder="Enter your email" class="flex-1 bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-      <button type="submit" class="bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-bold px-6 py-3 rounded-lg transition">Join the Waitlist</button>
-    </form>
-    <p class="msg mt-3 text-sm text-emerald-400 hidden">✓ You're on the list. We'll be in touch!</p>
+    <div class="mt-8 w-full" style="max-width:640px;margin:0 auto;"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdcT-wnSr7bgi-IBlCK43MCCgXmPF6af6KChM6bpNdh93ErOA/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" style="border:0;border-radius:12px;background:#0f172a;" loading="lazy" title="Waitlist form">Loading…</iframe></div>
+    
     <p class="mt-4 text-xs text-slate-500">No spam. Unsubscribe anytime.</p>
   </div>
 </section>
@@ -154,14 +147,6 @@ tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-ser
   </div>
 </footer>
 
-<script>
-function handleWaitlist(e){
-  e.preventDefault();
-  e.target.reset();
-  e.target.nextElementSibling.classList.remove('hidden');
-  document.querySelectorAll('.msg').forEach(m=>m.classList.remove('hidden'));
-  return false;
-}
-</script>
+
 </body>
 </html>
